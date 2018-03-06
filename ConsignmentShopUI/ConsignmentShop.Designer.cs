@@ -1,4 +1,6 @@
-﻿namespace ConsignmentShopUI
+﻿using System;
+
+namespace ConsignmentShopUI
 {
     partial class ConsignmentShop
     {
@@ -53,7 +55,7 @@
             this.itemsListBox.ItemHeight = 32;
             this.itemsListBox.Location = new System.Drawing.Point(46, 229);
             this.itemsListBox.Name = "itemsListBox";
-            this.itemsListBox.Size = new System.Drawing.Size(592, 324);
+            this.itemsListBox.Size = new System.Drawing.Size(508, 324);
             this.itemsListBox.TabIndex = 1;
             // 
             // itemsListBoxLabel
@@ -68,7 +70,7 @@
             // 
             // addToCart
             // 
-            this.addToCart.Location = new System.Drawing.Point(739, 349);
+            this.addToCart.Location = new System.Drawing.Point(595, 361);
             this.addToCart.Name = "addToCart";
             this.addToCart.Size = new System.Drawing.Size(217, 71);
             this.addToCart.TabIndex = 3;
@@ -79,24 +81,25 @@
             // 
             this.shoppingCartListBoxLabel.AutoSize = true;
             this.shoppingCartListBoxLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.shoppingCartListBoxLabel.Location = new System.Drawing.Point(1040, 194);
+            this.shoppingCartListBoxLabel.Location = new System.Drawing.Point(832, 194);
             this.shoppingCartListBoxLabel.Name = "shoppingCartListBoxLabel";
             this.shoppingCartListBoxLabel.Size = new System.Drawing.Size(210, 32);
             this.shoppingCartListBoxLabel.TabIndex = 5;
             this.shoppingCartListBoxLabel.Text = "Shopping Cart";
+            this.shoppingCartListBoxLabel.Click += new System.EventHandler(this.shoppingCartListBoxLabel_Click);
             // 
             // shoppingCartListBox
             // 
             this.shoppingCartListBox.FormattingEnabled = true;
             this.shoppingCartListBox.ItemHeight = 32;
-            this.shoppingCartListBox.Location = new System.Drawing.Point(1046, 229);
+            this.shoppingCartListBox.Location = new System.Drawing.Point(838, 229);
             this.shoppingCartListBox.Name = "shoppingCartListBox";
-            this.shoppingCartListBox.Size = new System.Drawing.Size(592, 324);
+            this.shoppingCartListBox.Size = new System.Drawing.Size(508, 324);
             this.shoppingCartListBox.TabIndex = 4;
             // 
             // makePurchase
             // 
-            this.makePurchase.Location = new System.Drawing.Point(1421, 559);
+            this.makePurchase.Location = new System.Drawing.Point(1129, 559);
             this.makePurchase.Name = "makePurchase";
             this.makePurchase.Size = new System.Drawing.Size(217, 71);
             this.makePurchase.TabIndex = 6;
@@ -107,7 +110,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1686, 958);
+            this.ClientSize = new System.Drawing.Size(1410, 860);
             this.Controls.Add(this.makePurchase);
             this.Controls.Add(this.shoppingCartListBoxLabel);
             this.Controls.Add(this.shoppingCartListBox);
@@ -122,6 +125,11 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void shoppingCartListBoxLabel_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
