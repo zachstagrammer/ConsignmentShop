@@ -76,6 +76,7 @@ namespace ConsignmentShopUI
             this.addToCart.TabIndex = 3;
             this.addToCart.Text = "Add To Cart =>";
             this.addToCart.UseVisualStyleBackColor = true;
+            this.addToCart.Click += new System.EventHandler(this.addToCart_Click);
             // 
             // shoppingCartListBoxLabel
             // 
@@ -119,7 +120,7 @@ namespace ConsignmentShopUI
             this.Controls.Add(this.itemsListBox);
             this.Controls.Add(this.headerText);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ConsignmentShop";
             this.Text = "Consignment Shop";
             this.ResumeLayout(false);

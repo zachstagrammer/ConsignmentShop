@@ -36,10 +36,6 @@ namespace ConsignmentShopUI
             shoppingCartListBox.ValueMember = "Display";
         }
 
-        private void Label1_Click(object sender, EventArgs e)
-        {
-            InitializeComponent();
-        }
         private void SetupData()
         {
             store.Vendors.Add(new Vendor { FirstName = "Zach", LastName = "Phillips" });
@@ -75,6 +71,19 @@ namespace ConsignmentShopUI
 
             store.Name = "Bookworms4Life";
 
+        }
+
+        private void addToCart_Click(object sender, EventArgs e)
+        {
+            // Figure out what is selected from items list
+            // Copy that item to the shopping cart
+            // Do we remove the item from the items list? - no
+
+            Item selectedItem = (Item)itemsListBox.SelectedItem;
+
+            shoppingCartData.Add(selectedItem);
+
+            cartBinding.ResetBindings(false);
         }
     }
 }
