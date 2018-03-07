@@ -1,12 +1,9 @@
 ﻿using ConsignmentShopLibrary;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows.Forms;
 
 namespace ConsignmentShopUI
@@ -83,10 +80,6 @@ namespace ConsignmentShopUI
 
         private void addToCart_Click(object sender, EventArgs e)
         {
-            // Figure out what is selected from items list
-            // Copy that item to the shopping cart
-            // Do we remove the item from the items list? - no
-
             Item selectedItem = (Item)itemsListBox.SelectedItem;
 
             shoppingCartData.Add(selectedItem);
@@ -96,9 +89,6 @@ namespace ConsignmentShopUI
 
         private void makePurchase_Click(object sender, EventArgs e)
         {
-            // Mark each item in the cart as sold
-            // Clear the cart
-
             foreach (Item item in shoppingCartData)
             {
                 item.Sold = true;
